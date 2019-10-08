@@ -27,18 +27,20 @@
                 <br>
                 <p>Each time when the game starts, the game will change the values of each crystal.</p>
             </div>
-            <div class="random-score">0</div>
-            <div class="scoreboard">
-                <p>Wins: <span id="wins">0</span></p>
-                <p>Losses: <span id="losses">0</span></p>
+            <div class="gamescore">
+                <div class="random-score">0</div>
+                <div class="scoreboard">
+                    <p>Wins: <span id="wins">0</span></p>
+                    <p>Losses: <span id="losses">0</span></p>
+                </div>
             </div>
             <div class="crystal-imgs">
-                <img src="assets/images/red-crystal.jpg" alt="Red Crystal">
-                <img src="assets/images/green-crystal.jpg" alt="green Crystal">
-                <img src="assets/images/red-crystal.jpg" alt="Yellow Crystal">
-                <img src="assets/images/blue-crystal.png" alt="Blue Crystal">
+                <img class="crystal" src="assets/images/red-crystal.jpg" alt="Red Crystal">
+                <img class="crystal" src="assets/images/green-crystal.jpg" alt="green Crystal">
+                <img class="crystal" src="assets/images/yellow-crystal.jpg" alt="Yellow Crystal">
+                <img class="crystal" id="blue-crystal" src="assets/images/blue-crystal.png" alt="Blue Crystal">
             </div>
-            <div class="totalscore">
+            <div class="total-score">
                 <p>Your total score is: </p>
             </div>
             <div id="user-score">
@@ -46,6 +48,7 @@
             </div>
         </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>
 </body>
 
