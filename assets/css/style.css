@@ -1,0 +1,99 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url(../images/crystal-background.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    margin: 10px;
+    padding: 0 30px;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+}
+
+.title {
+    width: 30%;
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Rock Salt', cursive;
+    background-color: rgb(224, 238, 30);
+}
+
+.game-info {
+    background-color: rgb(21, 227, 241);
+    font-family: 'Fauna One', serif;
+    padding: 20px;
+    margin: 10px 0;
+    width: 700px;
+    height: 400px;
+}
+
+.game-info p {
+    /* color: rgb(3, 151, 3); */
+    color: black;
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+.gamescore {
+    display: flex;
+}
+
+.random-score {
+    width: 300px;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 50px;
+    background-color: rgb(80, 190, 80);
+    color: #fff;
+}
+
+.scoreboard {
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px;
+    padding: 10px;
+    line-height: 1.5em;
+    background-color: rgb(218, 218, 218);
+    color: rgb(71, 71, 71);
+    font-size: 25px;
+}
+
+.crystal-imgs {
+    display: flex;
+    flex-flow: row;
+}
+
+.crystal {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+#blue-crystal {
+    background-color: #fff;
+}
+
+.total-score {
+    width: 300px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgb(86, 82, 150);
+}
+
+#user-score {
+    font-size: 50px;
+    margin: 10px 0;
+    background-color: rgb(86, 82, 150);
+    color: #fff;
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+}
