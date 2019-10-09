@@ -10,21 +10,48 @@ var randomNumber = $('.random-number').text(Math.floor(Math.random() * (120 - 19
 
 
 // crystal img click events
-$('.crystal-img').on("click", function() {
+
+$('#red-crystal').on('click', function() {
 
     // random number generator for crystal img from 1 -12
     var randomImgNumber = Math.floor(Math.random() * 12) + 1;
 
-    // click 3 + n = 3;
+    randomImgNumber += randomImgNumber;
 
-    // random number generator to stay the same unless the page is refresh.
-    if (randomImgNumber !== lockNumber) {
+    $(userScore).text(randomImgNumber);
 
+    if (userScore > randomNumber) {
+        wins++;
+        $('wins').text(wins);
+
+        // reset function
+        // reset();
     }
 
-    // output the random number generator to userScore
+    // test
+    console.log("Red crystal: " + randomImgNumber);
+});
 
+$('#green-crystal').on('click', function() {
+    // random number generator for crystal img from 1 -12
+    var randomImgNumber = Math.floor(Math.random() * 12) + 1;
 
     // test
-    console.log(randomImgNumber);
+    console.log("Green crystal: " + randomImgNumber);
+});
+
+$('#yellow-crystal').on('click', function() {
+    // random number generator for crystal img from 1 -12
+    var randomImgNumber = Math.floor(Math.random() * 12) + 1;
+
+    // test
+    console.log("Yellow crystal: " + randomImgNumber);
+});
+
+$('#blue-crystal').on('click', function() {
+    // random number generator for crystal img from 1 -12
+    var randomImgNumber = Math.floor(Math.random() * 12) + 1;
+
+    // test
+    console.log("Blue crystal: " + randomImgNumber);
 });
