@@ -6,33 +6,32 @@ var lockNumber = false;
 
 // Generate a random number from 19 - 120 (max - min).
 // 120 is the max number so we subtract it to 19 which is the min number
-var randomNumber = $('.random-number').text(Math.floor(Math.random() * (120 - 19) + 1) + 19);
+var randomNumber = $('.random-number').text(Math.floor(Math.random() * 101) + 19);
 
+// random number generator for crystal img from 1 -12
+var redCrystal = Math.floor(Math.random() * 12) + 1;
+var greenCrystal = Math.floor(Math.random() * 12) + 1;
+var yellowCrystal = Math.floor(Math.random() * 12) + 1;
+var blueCrystal = Math.floor(Math.random() * 12) + 1;
 
 function reset() {
-    // set the wins to 0
-    wins = 0;
-
-    // set the losses to 0
-    losses = 0;
-
     // set the user score counter to 0
     $('#user-score').text(0);
 
     // generate a new random number
     randomNumber = $('.random-number').text(Math.floor(Math.random() * (120 - 19) + 1) + 19);
+
+    // random number generator for crystal img from 1 -12
+    var redCrystal = Math.floor(Math.random() * 12) + 1;
+    var greenCrystal = Math.floor(Math.random() * 12) + 1;
+    var yellowCrystal = Math.floor(Math.random() * 12) + 1;
+    var blueCrystal = Math.floor(Math.random() * 12) + 1;
 }
 
 // crystal img click events
-
 $('#red-crystal').on('click', function() {
 
-    // random number generator for crystal img from 1 -12
-    var randomImgNumber = Math.floor(Math.random() * 12) + 1;
-
-
-
-    $(userScore).text(randomImgNumber);
+    $(userScore).text(redCrystal);
 
 
     if (userScore === randomNumber) {
@@ -56,7 +55,7 @@ $('#red-crystal').on('click', function() {
     }
 
     // test
-    console.log("Red crystal: " + randomImgNumber);
+    console.log("Red crystal: " + redCrystal);
 });
 
 // $('#green-crystal').on('click', function() {
