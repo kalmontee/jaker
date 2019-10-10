@@ -16,18 +16,20 @@ var yellowCrystal = Math.floor(Math.random() * 12) + 1;
 var blueCrystal = Math.floor(Math.random() * 12) + 1;
 
 function reset() {
-    // set the user score counter to 0
-    userScore.text(0);
 
     // generate a new random number
     randomNumber = Math.floor(Math.random() * 101) + 19;
     $('.random-number').text(randomNumber);
 
     // random number generator for crystal img from 1 -12
-    var redCrystal = Math.floor(Math.random() * 12) + 1;
-    var greenCrystal = Math.floor(Math.random() * 12) + 1;
-    var yellowCrystal = Math.floor(Math.random() * 12) + 1;
-    var blueCrystal = Math.floor(Math.random() * 12) + 1;
+    redCrystal = Math.floor(Math.random() * 12) + 1;
+    greenCrystal = Math.floor(Math.random() * 12) + 1;
+    yellowCrystal = Math.floor(Math.random() * 12) + 1;
+    blueCrystal = Math.floor(Math.random() * 12) + 1;
+
+    // set the user score counter to 0
+    userScore = 0;
+    $('#userScore').text(0);
 }
 
 // crystal img click events
@@ -36,7 +38,6 @@ $('#red-crystal').on('click', function() {
     // add the redCrystal random number to the user score (counter)
     userScore = userScore + redCrystal;
     $('#user-score').text(userScore);
-
 
     if (userScore === randomNumber) {
         // add +1 to wins
