@@ -30,54 +30,34 @@ function reset() {
 
 // crystal img click events
 $('#red-crystal').on('click', function() {
-
+    // output the random number crystal to the user score
     $(userScore).text(redCrystal);
-
-
-    if (userScore === randomNumber) {
-        wins++;
-        $('#wins').text(wins);
-
-        // Display a message that tells the user he won!
-        // $('.scoreboard').text("Congrats! You won!!");
-
-        // reset function
-        // reset();
-
-    } else if (userScore > randomNumber) {
-        losses++;
-        $('#losses').text(losses);
-
-        // Display a message that tells the user he won!
-        // $('.scoreboard').text("HA! You Lost...");
-
-        // reset
-    }
 
     // test
     console.log("Red crystal: " + redCrystal);
 });
 
-// $('#green-crystal').on('click', function() {
-//     // random number generator for crystal img from 1 -12
-//     var randomImgNumber = Math.floor(Math.random() * 12) + 1;
+$('#green-crystal').on('click', function() {
+    // output the random number crystal to the user score
+    $(userScore).text(greenCrystal);
 
-//     // test
-//     console.log("Green crystal: " + randomImgNumber);
-// });
+    // test
+    console.log("Green crystal: " + greenCrystal);
+});
 
-// $('#yellow-crystal').on('click', function() {
-//     // random number generator for crystal img from 1 -12
-//     var randomImgNumber = Math.floor(Math.random() * 12) + 1;
+$('#yellow-crystal').on('click', function() {
+    // output the random number crystal to the user score
+    $(userScore).text(yellowCrystal);
 
-//     // test
-//     console.log("Yellow crystal: " + randomImgNumber);
-// });
 
-// $('#blue-crystal').on('click', function() {
-//     // random number generator for crystal img from 1 -12
-//     var randomImgNumber = Math.floor(Math.random() * 12) + 1;
+    // test
+    console.log("Yellow crystal: " + yellowCrystal);
+});
 
-//     // test
-//     console.log("Blue crystal: " + randomImgNumber);
-// });
+$('#blue-crystal').on('click', function() {
+    // output the random number crystal to the user score
+    $(userScore).text(blueCrystal);
+
+    // test
+    console.log("Blue crystal: " + blueCrystal);
+});
