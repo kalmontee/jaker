@@ -33,6 +33,9 @@ $('#red-crystal').on('click', function() {
     // output the random number crystal to the user score
     $(userScore).text(redCrystal);
 
+    // add the redCrystal random number to the user score
+    redCrystal += redCrystal;
+
     // test
     console.log("Red crystal: " + redCrystal);
 });
@@ -40,6 +43,9 @@ $('#red-crystal').on('click', function() {
 $('#green-crystal').on('click', function() {
     // output the random number crystal to the user score
     $(userScore).text(greenCrystal);
+
+    // add the redCrystal random number to the user score
+    greenCrystal += greenCrystal;
 
     // test
     console.log("Green crystal: " + greenCrystal);
@@ -49,6 +55,8 @@ $('#yellow-crystal').on('click', function() {
     // output the random number crystal to the user score
     $(userScore).text(yellowCrystal);
 
+    // add the redCrystal random number to the user score
+    yellowCrystal += yellowCrystal;
 
     // test
     console.log("Yellow crystal: " + yellowCrystal);
@@ -57,6 +65,9 @@ $('#yellow-crystal').on('click', function() {
 $('#blue-crystal').on('click', function() {
     // output the random number crystal to the user score
     $(userScore).text(blueCrystal);
+
+    // add the redCrystal random number to the user score
+    blueCrystal += blueCrystal;
 
     // test
     console.log("Blue crystal: " + blueCrystal);
