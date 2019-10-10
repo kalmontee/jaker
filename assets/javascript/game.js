@@ -38,7 +38,7 @@ $('#red-crystal').on('click', function() {
     $('#user-score').text(userScore);
 
 
-    if (redCrystal === randomNumber) {
+    if (userScore === randomNumber) {
         // add +1 to wins
         wins++;
         $('#wins').text(wins);
@@ -49,7 +49,7 @@ $('#red-crystal').on('click', function() {
         // When won call the reset function
         reset();
 
-    } else if (redCrystal > randomNumber) {
+    } else if (userScore > randomNumber) {
         // add +1 to losses
         losses++;
         $('#losses').text(losses);
@@ -71,7 +71,7 @@ $('#green-crystal').on('click', function() {
     userScore = userScore + greenCrystal;
     $('#user-score').text(userScore);
 
-    if (greenCrystal === randomNumber) {
+    if (userScore === randomNumber) {
         // add +1 to wins
         wins++;
         $('#wins').text(wins);
@@ -82,7 +82,7 @@ $('#green-crystal').on('click', function() {
         // When won call the reset function
         reset();
 
-    } else if (greenCrystal > randomNumber) {
+    } else if (userScore > randomNumber) {
         // add +1 to losses
         losses++;
         $('#losses').text(losses);
@@ -103,7 +103,7 @@ $('#yellow-crystal').on('click', function() {
     userScore = userScore + yellowCrystal;
     $('#user-score').text(userScore);
 
-    if (redCrystal === randomNumber) {
+    if (userScore === randomNumber) {
         // add +1 to wins
         wins++;
         $('#wins').text(wins);
@@ -111,7 +111,7 @@ $('#yellow-crystal').on('click', function() {
         // When won call the reset function
         reset();
 
-    } else if (redCrystal > randomNumber) {
+    } else if (userScore > randomNumber) {
         // add +1 to losses
         losses++;
         $('#losses').text(losses);
@@ -129,7 +129,7 @@ $('#blue-crystal').on('click', function() {
     userScore = userScore + blueCrystal;
     $('#user-score').text(userScore);
 
-    if (redCrystal === randomNumber) {
+    if (userScore === randomNumber) {
         // add +1 to wins
         wins++;
         $('#wins').text(wins);
@@ -137,7 +137,7 @@ $('#blue-crystal').on('click', function() {
         // When won call the reset function
         reset();
 
-    } else if (redCrystal > randomNumber) {
+    } else if (userScore > randomNumber) {
         // add +1 to losses
         losses++;
         $('#losses').text(losses);
