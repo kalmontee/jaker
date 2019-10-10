@@ -32,6 +32,24 @@ function reset() {
     $('#userScore').text(userScore);
 }
 
+// To avoid DRY - create a function call gameStatus which determines when a player wins or losses the game.
+function setWinner() {
+    win++
+    $('#wins').text(wins);
+
+    // Display the status
+    $('#status').text("Congrats! You won.");
+}
+
+function setLosser() {
+    // add +1 to losses
+    losses++;
+    $('#losses').text(losses);
+
+    // Display the status
+    $('#status').text("HA! You lost.");
+}
+
 // crystal img click events
 $('#red-crystal').on('click', function() {
 
@@ -40,28 +58,19 @@ $('#red-crystal').on('click', function() {
     $('#user-score').text(userScore);
 
     if (userScore === randomNumber) {
-        // add +1 to wins
-        wins++;
-        $('#wins').text(wins);
+        // winner function
+        setWinner();
 
-        // Display the status
-        $('#status').text("Congrats! You won.");
-
-        // When won call the reset function
+        // reset
         reset();
 
     } else if (userScore > randomNumber) {
-        // add +1 to losses
-        losses++;
-        $('#losses').text(losses);
+        // losser function
+        setLosser();
 
-        // Display the status
-        $('#status').text("HA! You lost.");
-
-        // When lost call the reset function
+        // reset
         reset();
     }
-
     // test
     console.log("Red crystal: " + redCrystal);
 });
@@ -73,23 +82,15 @@ $('#green-crystal').on('click', function() {
     $('#user-score').text(userScore);
 
     if (userScore === randomNumber) {
-        // add +1 to wins
-        wins++;
-        $('#wins').text(wins);
-
-        // Display the status
-        $('#status').text("Congrats! You won.");
+        // call the winner function
+        setWinner();
 
         // When won call the reset function
         reset();
 
     } else if (userScore > randomNumber) {
-        // add +1 to losses
-        losses++;
-        $('#losses').text(losses);
-
-        // Display the status
-        $('#status').text("HA! You lost.");
+        // call the losser function
+        setLosser();
 
         // When lost call the reset function
         reset();
@@ -105,17 +106,15 @@ $('#yellow-crystal').on('click', function() {
     $('#user-score').text(userScore);
 
     if (userScore === randomNumber) {
-        // add +1 to wins
-        wins++;
-        $('#wins').text(wins);
+        // call the winner function
+        setWinner();
 
         // When won call the reset function
         reset();
 
     } else if (userScore > randomNumber) {
-        // add +1 to losses
-        losses++;
-        $('#losses').text(losses);
+        // call the losser function
+        setLosser();
 
         // When lost call the reset function
         reset();
@@ -131,17 +130,15 @@ $('#blue-crystal').on('click', function() {
     $('#user-score').text(userScore);
 
     if (userScore === randomNumber) {
-        // add +1 to wins
-        wins++;
-        $('#wins').text(wins);
+        // call the winner function
+        setWinner();
 
         // When won call the reset function
         reset();
 
     } else if (userScore > randomNumber) {
-        // add +1 to losses
-        losses++;
-        $('#losses').text(losses);
+        // call the losser function
+        setLosser();
 
         // When lost call the reset function
         reset();
