@@ -29,14 +29,14 @@ function reset() {
 
     // set the user score counter to 0
     userScore = 0;
-    $('#userScore').text(0);
+    $('#userScore').text(userScore);
 }
 
 // crystal img click events
 $('#red-crystal').on('click', function() {
 
     // add the redCrystal random number to the user score (counter)
-    userScore = userScore + redCrystal;
+    userScore += redCrystal;
     $('#user-score').text(userScore);
 
     if (userScore === randomNumber) {
@@ -69,7 +69,7 @@ $('#red-crystal').on('click', function() {
 $('#green-crystal').on('click', function() {
 
     // add the redCrystal random number to the user score
-    userScore = userScore + greenCrystal;
+    userScore += greenCrystal;
     $('#user-score').text(userScore);
 
     if (userScore === randomNumber) {
@@ -101,7 +101,7 @@ $('#green-crystal').on('click', function() {
 
 $('#yellow-crystal').on('click', function() {
     // output the random number crystal to the user score
-    userScore = userScore + yellowCrystal;
+    userScore += yellowCrystal;
     $('#user-score').text(userScore);
 
     if (userScore === randomNumber) {
@@ -127,7 +127,7 @@ $('#yellow-crystal').on('click', function() {
 
 $('#blue-crystal').on('click', function() {
     // output the random number crystal to the user score
-    userScore = userScore + blueCrystal;
+    userScore += blueCrystal;
     $('#user-score').text(userScore);
 
     if (userScore === randomNumber) {
