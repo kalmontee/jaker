@@ -98,58 +98,54 @@ $('#green-crystal').on('click', function() {
     console.log("Green crystal: " + greenCrystal);
 });
 
-// $('#yellow-crystal').on('click', function() {
-//     // output the random number crystal to the user score
-//     $(userScore).text(yellowCrystal);
+$('#yellow-crystal').on('click', function() {
+    // output the random number crystal to the user score
+    userScore = userScore + yellowCrystal;
+    $('#user-score').text(userScore);
 
-//     // add the redCrystal random number to the user score
-//     yellowCrystal += yellowCrystal;
+    if (redCrystal === randomNumber) {
+        // add +1 to wins
+        wins++;
+        $('#wins').text(wins);
 
-//     if (redCrystal === randomNumber) {
-//         // add +1 to wins
-//         wins++;
-//         $('#wins').text(wins);
+        // When won call the reset function
+        reset();
 
-//         // When won call the reset function
-//         reset();
+    } else if (redCrystal > randomNumber) {
+        // add +1 to losses
+        losses++;
+        $('#losses').text(losses);
 
-//     } else if (redCrystal > randomNumber) {
-//         // add +1 to losses
-//         losses++;
-//         $('#losses').text(losses);
+        // When lost call the reset function
+        reset();
+    }
 
-//         // When lost call the reset function
-//         reset();
-//     }
+    // test
+    console.log("Yellow crystal: " + yellowCrystal);
+});
 
-//     // test
-//     console.log("Yellow crystal: " + yellowCrystal);
-// });
+$('#blue-crystal').on('click', function() {
+    // output the random number crystal to the user score
+    userScore = userScore + blueCrystal;
+    $('#user-score').text(userScore);
 
-// $('#blue-crystal').on('click', function() {
-//     // output the random number crystal to the user score
-//     $(userScore).text(blueCrystal);
+    if (redCrystal === randomNumber) {
+        // add +1 to wins
+        wins++;
+        $('#wins').text(wins);
 
-//     // add the redCrystal random number to the user score
-//     blueCrystal += blueCrystal;
+        // When won call the reset function
+        reset();
 
-//     if (redCrystal === randomNumber) {
-//         // add +1 to wins
-//         wins++;
-//         $('#wins').text(wins);
+    } else if (redCrystal > randomNumber) {
+        // add +1 to losses
+        losses++;
+        $('#losses').text(losses);
 
-//         // When won call the reset function
-//         reset();
+        // When lost call the reset function
+        reset();
+    }
 
-//     } else if (redCrystal > randomNumber) {
-//         // add +1 to losses
-//         losses++;
-//         $('#losses').text(losses);
-
-//         // When lost call the reset function
-//         reset();
-//     }
-
-//     // test
-//     console.log("Blue crystal: " + blueCrystal);
-// });
+    // test
+    console.log("Blue crystal: " + blueCrystal);
+});
