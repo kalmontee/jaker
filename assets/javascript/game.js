@@ -66,12 +66,10 @@ $('#red-crystal').on('click', function() {
 });
 
 $('#green-crystal').on('click', function() {
-    // output the random number crystal to the user score
-    // $(userScore).text(greenCrystal);
-    $('#user-score').prepend(greenCrystal);
 
     // add the redCrystal random number to the user score
     userScore = userScore + greenCrystal;
+    $('#user-score').text(userScore);
 
     if (greenCrystal === randomNumber) {
         // add +1 to wins
