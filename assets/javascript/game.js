@@ -1,6 +1,7 @@
 var wins = 0;
 var losses = 0;
 var userScore = 0;
+$('#user-score').text(userScore);
 
 
 // Generate a random number from 19 - 120 (max - min).
@@ -18,8 +19,8 @@ function reset() {
 
     // set the user score counter to 0
     userScore = 0;
-    $('#userScore').text(userScore);
-    console.log(userScore);
+    $('#user-score').text(userScore);
+    console.log(userScore); //test
 
     // generate a new random number
     randomNumber = Math.floor(Math.random() * 101) + 19;
