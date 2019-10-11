@@ -34,20 +34,20 @@ function reset() {
 
 // To avoid DRY - create a function call gameStatus which determines when a player wins or losses the game.
 function setWinner() {
-    win++
-    $('#wins').text(wins);
+    this.wins++
+        $('#wins').text(wins);
 
     // Display the status
-    $('#status').text("Congrats! You won.");
+    $('#status').text("Congrats! You won.").css('color', 'blue');
 }
 
 function setLosser() {
     // add +1 to losses
-    losses++;
+    this.losses++;
     $('#losses').text(losses);
 
     // Display the status
-    $('#status').text("HA! You lost.");
+    $('#status').text("HA! You lost.").css('color', 'red');
 }
 
 // crystal img click events
