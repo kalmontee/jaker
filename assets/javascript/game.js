@@ -3,9 +3,7 @@ var losses = 0;
 var userScore = 0;
 $('#user-score').text(userScore);
 
-
 // Generate a random number from 19 - 120 (max - min).
-// 120 is the max number so we subtract it to 19 which is the min number
 var randomNumber = Math.floor(Math.random() * 101) + 19;
 $('.random-number').text(randomNumber);
 
@@ -20,7 +18,6 @@ function reset() {
     // set the user score counter to 0
     userScore = 0;
     $('#user-score').text(userScore);
-    console.log(userScore); //test
 
     // generate a new random number
     randomNumber = Math.floor(Math.random() * 101) + 19;
@@ -33,7 +30,8 @@ function reset() {
     blueCrystal = Math.floor(Math.random() * 12) + 1;
 }
 
-// To avoid DRY - create two function calls setWinner and setLosser which determines when a player wins or losses the game.
+// To avoid DRY - I create two function calls setWinner and setLosser which determines when a player wins or losses the game.
+// Inside setWinner and setLosser function I called my reset function so the game can reset. 
 function setWinner() {
 
     // 'this' keyword is targetting the global object of the wins variable
@@ -43,7 +41,7 @@ function setWinner() {
     // Display the status
     $('#status').text("Congrats! You won.").css('color', 'blue');
 
-    // when player wins the game will reset
+    // when player wins, the game will reset
     reset();
 }
 
@@ -56,7 +54,7 @@ function setLosser() {
     // Display the status
     $('#status').text("HA! You lost.").css('color', 'red');
 
-    // when player losses the game will reset
+    // when player losses, the game will reset
     reset();
 }
 
@@ -75,8 +73,6 @@ $('#red-crystal').on('click', function() {
         // losser function
         setLosser();
     }
-    // test
-    console.log("Red crystal: " + redCrystal);
 });
 
 $('#green-crystal').on('click', function() {
@@ -93,9 +89,6 @@ $('#green-crystal').on('click', function() {
         // call the losser function
         setLosser();
     }
-
-    // test
-    console.log("Green crystal: " + greenCrystal);
 });
 
 $('#yellow-crystal').on('click', function() {
@@ -111,9 +104,6 @@ $('#yellow-crystal').on('click', function() {
         // call the losser function
         setLosser();
     }
-
-    // test
-    console.log("Yellow crystal: " + yellowCrystal);
 });
 
 $('#blue-crystal').on('click', function() {
@@ -129,7 +119,4 @@ $('#blue-crystal').on('click', function() {
         // call the losser function
         setLosser();
     }
-
-    // test
-    console.log("Blue crystal: " + blueCrystal);
 });
