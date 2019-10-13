@@ -61,7 +61,7 @@ function setLosser() {
 // crystal img click events
 $('#red-crystal').on('click', function() {
 
-    // add the redCrystal random number to the user score (counter)
+    // output the random number crystal to the user score
     userScore += redCrystal;
     $('#user-score').text(userScore);
 
@@ -77,7 +77,7 @@ $('#red-crystal').on('click', function() {
 
 $('#green-crystal').on('click', function() {
 
-    // add the redCrystal random number to the user score
+    // output the random number crystal to the user score
     userScore += greenCrystal;
     $('#user-score').text(userScore);
 
