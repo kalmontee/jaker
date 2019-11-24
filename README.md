@@ -2,12 +2,13 @@
 
 A fun crystal interactive game.
 
-## Here's How The App Works
+## Instructions
 
 There will be four crystals displayed as buttons on the page.
 
-   ** The player will be shown a random number at the start of the game.
-   ** A random number shown at the start of the game should be between 19 - 120.
+   * The player will be shown a random number at the start of the game.
+   
+   * A random number shown at the start of the game should be between 19 - 120.
 
 Each crystal will hold have a random hidden value between 1 - 12.
 
