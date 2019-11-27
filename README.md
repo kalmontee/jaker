@@ -2,6 +2,16 @@
 
 A fun crystal interactive game.
 
+## Technologies
+
+* HTML
+
+* CSS
+
+* JavaScript
+
+* jQuery
+
 ## Instructions
 
 There will be four crystals displayed as buttons on the page.
