@@ -1,42 +1,42 @@
 body {
     font-family: 'Roboto Condensed', sans-serif;
-    background-image: url(../images/crystal-background.jpeg);
+    background-image: url(../images/crystal-background.jpg);
     background-size: cover;
     background-position: center;
 }
 
 section {
-    margin: 10px;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
-.container {
+aside {
     display: flex;
-    flex-flow: column;
 }
 
 .title {
-    width: 30%;
-    padding: 10px;
-    font-size: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    text-align: center;
     font-family: 'Rock Salt', cursive;
-    background-color: rgb(224, 238, 30);
 }
 
 .game-info {
-    background-color: rgb(21, 227, 241);
+    background-color: rgb(48, 48, 48);
     font-family: 'Fauna One', serif;
-    padding: 20px;
-    margin: 10px 0;
-    width: 700px;
-    height: 400px;
+    padding: 10px;
+    margin: 30px 0;
+    width: 430px;
+    height: 566px;
+    -webkit-box-shadow: 0px 0px 36px 5px #000000;
+    box-shadow: 0px 0px 36px 5px #000000;
 }
 
 .game-info p {
-    /* color: rgb(3, 151, 3); */
-    color: black;
+    color: #fff;
     font-size: 20px;
-    line-height: 1.5em;
+    line-height: 1.7em;
 }
 
 .gamescore {
@@ -44,57 +44,52 @@ section {
 }
 
 .random-number {
-    width: 300px;
+    width: 200px;
     height: 100px;
     margin: 10px 0;
     padding: 10px;
     font-size: 50px;
     background-color: rgb(80, 190, 80);
     color: #fff;
+    -webkit-box-shadow: 0px 0px 36px 5px #000000;
+    box-shadow: 0px 0px 36px 5px #000000;
 }
 
 .scoreboard {
     width: 200px;
     height: 100px;
-    margin: 10px 10px;
+    margin: 10px 30px;
     padding: 10px;
+    font-size: 25px;
     line-height: 1.5em;
     background-color: rgb(218, 218, 218);
     color: rgb(71, 71, 71);
-    font-size: 25px;
+    -webkit-box-shadow: 0px 0px 36px 5px #000000;
+    box-shadow: 0px 0px 36px 5px #000000;
 }
 
-div.crystal {
-    display: flex;
-    flex-flow: row;
+.crystal-game {
+    margin-left: 100px;
+    margin-top: 100px;
 }
 
 .crystal-img {
     height: 150px;
     width: 150px;
-    margin: 10px;
+    margin: 10px 10px 20px 10px;
     cursor: pointer;
     border-radius: 50%;
-}
-
-#blue-crystal {
-    background-color: #fff;
-}
-
-.total-score {
-    width: 300px;
-    padding: 10px;
-    font-size: 20px;
-    color: #fff;
-    background-color: rgb(86, 82, 150);
+    background-color: rgb(255, 255, 255);
 }
 
 #user-score {
-    font-size: 50px;
+    width: 200px;
+    height: 100px;
     margin: 10px 0;
+    padding: 10px;
+    font-size: 50px;
     background-color: rgb(86, 82, 150);
     color: #fff;
-    width: 300px;
-    height: 100px;
-    padding: 10px;
+    -webkit-box-shadow: 0px 0px 36px 5px #000000;
+    box-shadow: 0px 0px 36px 5px #000000;
 }
