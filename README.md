@@ -1,6 +1,8 @@
+![Screenshot (77)](https://user-images.githubusercontent.com/52462582/69773346-a02c1e80-1160-11ea-8030-9b79ba3e0765.png)
+
 # Crystal Collector Game
 
-A fun crystal interactive game.
+A fun interactive game.
 
 ## Technologies
 
@@ -36,3 +38,6 @@ The game restarts whenever the player wins or loses.
   * When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
 
   * The app will show the number of games the player wins and loses. If the player refreshes the page then the winning and losing score with reset to 0.
+  
+  ## Video Demo
+  https://drive.google.com/open?id=1vNGifhW3HHsGKPro_ctk7HMXxVU7s1Ec
