@@ -14,7 +14,6 @@ var yellowCrystal = Math.floor(Math.random() * 12) + 1;
 var blueCrystal = Math.floor(Math.random() * 12) + 1;
 
 function reset() {
-
     // set the user score counter to 0
     userScore = 0;
     $('#user-score').text(userScore);
@@ -30,32 +29,31 @@ function reset() {
     blueCrystal = Math.floor(Math.random() * 12) + 1;
 }
 
-// To avoid DRY - I create two function calls setWinner and setLosser which determines when a player wins or losses the game.
-// Inside setWinner and setLosser function I called my reset function so the game can reset. 
+// Will declare if the player wins or losses
 function setWinner() {
 
-    // 'this' keyword is targetting the global object of the wins variable
-    this.wins++;
-    $('#wins').text(wins);
+    if (userScore === randomNumber) {
+        // 'this' keyword is targetting the global object of the wins variable
+        this.wins++;
+        $('#wins').text(wins);
 
-    // Display the status
-    $('#status').text("Congrats! You won.").css('color', 'blue');
+        // Display the status
+        $('#status').text("Congrats! You won.").css('color', 'blue');
 
-    // when player wins, the game will reset
-    reset();
-}
+        // when the player wins, the game will reset.
+        reset();
 
-function setLosser() {
-    // add +1 to losses
-    // 'this' keyword is targetting the global object of the losses variable
-    this.losses++;
-    $('#losses').text(losses);
+    } else if (userScore > randomNumber) {
+        // 'this' keyword is targetting the global object of the losses variable
+        this.losses++;
+        $('#losses').text(losses);
 
-    // Display the status
-    $('#status').text("HA! You lost.").css('color', 'red');
+        // Display the status
+        $('#status').text("HA! You lost.").css('color', 'red');
 
-    // when player losses, the game will reset
-    reset();
+        // when player losses, the game will reset
+        reset();
+    }
 }
 
 // crystal img click events
@@ -65,14 +63,7 @@ $('#red-crystal').on('click', function() {
     userScore += redCrystal;
     $('#user-score').text(userScore);
 
-    if (userScore === randomNumber) {
-        // winner function
-        setWinner();
-
-    } else if (userScore > randomNumber) {
-        // losser function
-        setLosser();
-    }
+    setWinner();
 });
 
 $('#green-crystal').on('click', function() {
@@ -81,14 +72,7 @@ $('#green-crystal').on('click', function() {
     userScore += greenCrystal;
     $('#user-score').text(userScore);
 
-    if (userScore === randomNumber) {
-        // call the winner function
-        setWinner();
-
-    } else if (userScore > randomNumber) {
-        // call the losser function
-        setLosser();
-    }
+    setWinner();
 });
 
 $('#yellow-crystal').on('click', function() {
@@ -96,14 +80,7 @@ $('#yellow-crystal').on('click', function() {
     userScore += yellowCrystal;
     $('#user-score').text(userScore);
 
-    if (userScore === randomNumber) {
-        // call the winner function
-        setWinner();
-
-    } else if (userScore > randomNumber) {
-        // call the losser function
-        setLosser();
-    }
+    setWinner();
 });
 
 $('#blue-crystal').on('click', function() {
@@ -111,12 +88,5 @@ $('#blue-crystal').on('click', function() {
     userScore += blueCrystal;
     $('#user-score').text(userScore);
 
-    if (userScore === randomNumber) {
-        // call the winner function
-        setWinner();
-
-    } else if (userScore > randomNumber) {
-        // call the losser function
-        setLosser();
-    }
+    setWinner();
 });
