@@ -14,79 +14,76 @@ var yellowCrystal = Math.floor(Math.random() * 12) + 1;
 var blueCrystal = Math.floor(Math.random() * 12) + 1;
 
 function reset() {
-    // set the user score counter to 0
-    userScore = 0;
-    $('#user-score').text(userScore);
+  // set the user score counter to 0
+  userScore = 0;
+  $('#user-score').text(userScore);
 
-    // generate a new random number
-    randomNumber = Math.floor(Math.random() * 101) + 19;
-    $('.random-number').text(randomNumber);
+  // generate a new random number
+  randomNumber = Math.floor(Math.random() * 101) + 19;
+  $('.random-number').text(randomNumber);
 
-    // random number generator for crystal img from 1 -12
-    redCrystal = Math.floor(Math.random() * 12) + 1;
-    greenCrystal = Math.floor(Math.random() * 12) + 1;
-    yellowCrystal = Math.floor(Math.random() * 12) + 1;
-    blueCrystal = Math.floor(Math.random() * 12) + 1;
+  // random number generator for crystal img from 1 -12
+  redCrystal = Math.floor(Math.random() * 12) + 1;
+  greenCrystal = Math.floor(Math.random() * 12) + 1;
+  yellowCrystal = Math.floor(Math.random() * 12) + 1;
+  blueCrystal = Math.floor(Math.random() * 12) + 1;
 }
 
 // Will declare if the player wins or losses
 function setWinner() {
+  if (userScore === randomNumber) {
+    // 'this' keyword is targetting the global object of the wins variable
+    this.wins++;
+    $('#wins').text(wins);
 
-    if (userScore === randomNumber) {
-        // 'this' keyword is targetting the global object of the wins variable
-        this.wins++;
-        $('#wins').text(wins);
+    // Display the status
+    $('#status').text("Congrats! You won.").css('color', 'blue');
 
-        // Display the status
-        $('#status').text("Congrats! You won.").css('color', 'blue');
+    // Reset the game once the player wins
+    reset();
 
-        // when the player wins, the game will reset.
-        reset();
+  } else if (userScore > randomNumber) {
+    // 'this' keyword is targetting the global object of the losses variable
+    this.losses++;
+    $('#losses').text(losses);
 
-    } else if (userScore > randomNumber) {
-        // 'this' keyword is targetting the global object of the losses variable
-        this.losses++;
-        $('#losses').text(losses);
+    // Display the status
+    $('#status').text("HA! You lost.").css('color', 'red');
 
-        // Display the status
-        $('#status').text("HA! You lost.").css('color', 'red');
-
-        // when player losses, the game will reset
-        reset();
-    }
+    // Reset the game once the player lose 
+    reset();
+  }
 }
 
 // crystal img click events
-$('#red-crystal').on('click', function() {
+$('#red-crystal').on('click', function () {
+  // output the random number crystal to the user score
+  userScore += redCrystal;
+  $('#user-score').text(userScore);
 
-    // output the random number crystal to the user score
-    userScore += redCrystal;
-    $('#user-score').text(userScore);
-
-    setWinner();
+  setWinner();
 });
 
-$('#green-crystal').on('click', function() {
+$('#green-crystal').on('click', function () {
+  // output the random number crystal to the user score
+  userScore += greenCrystal;
+  $('#user-score').text(userScore);
 
-    // output the random number crystal to the user score
-    userScore += greenCrystal;
-    $('#user-score').text(userScore);
-
-    setWinner();
+  setWinner();
 });
 
-$('#yellow-crystal').on('click', function() {
-    // output the random number crystal to the user score
-    userScore += yellowCrystal;
-    $('#user-score').text(userScore);
+$('#yellow-crystal').on('click', function () {
+  // output the random number crystal to the user score
+  userScore += yellowCrystal;
+  $('#user-score').text(userScore);
 
-    setWinner();
+  setWinner();
 });
 
-$('#blue-crystal').on('click', function() {
-    // output the random number crystal to the user score
-    userScore += blueCrystal;
-    $('#user-score').text(userScore);
+$('#blue-crystal').on('click', function () {
+  // output the random number crystal to the user score
+  userScore += blueCrystal;
+  $('#user-score').text(userScore);
 
-    setWinner();
+  setWinner();
 });
